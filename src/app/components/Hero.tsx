@@ -22,7 +22,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-neutral-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-I build clean, user-friendly web applications and optimize them for better performance and user experience.                    </p>
+                        I build clean, user-friendly web applications and optimize them for better performance and user experience.</p>
 
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center">
                         <a

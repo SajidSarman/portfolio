@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface Project {
@@ -7,6 +8,7 @@ interface Project {
   name: string;
   description: string;
   techStack: string[];
+  imageSrc: string;
   liveLink: string;
   githubLink: string;
   challenges: string;
@@ -22,6 +24,7 @@ const Projects = () => {
       name: 'Bazar Dor',
       description: 'A Bangla-language web app for checking current prices of everyday products.',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Better Auth with MongoDB'],
+      imageSrc: '/projects/Bazar_Dor.png',
       liveLink: 'https://bazar-dor-b14-a07-s-sarman.vercel.app/',
       githubLink: 'https://github.com/SajidSarman/b14-a07',
       challenges: '---',
@@ -31,7 +34,9 @@ const Projects = () => {
       id: 2,
       name: 'FITLOG',
       description: 'A simple and fast workout tracking dashboard to browse exercises, plan your daily lifts, and save workouts for later.',
-      techStack: ['Next.js', 'Tailwind CSS','TypeScript'],
+      techStack: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+      imageSrc: '/projects/FITLOG.png',
+
       liveLink: 'https://fitlog-b14-a06-s-sarman.vercel.app/',
       githubLink: 'https://github.com/SajidSarman/b14-a06',
       challenges: '---',
@@ -42,6 +47,7 @@ const Projects = () => {
       name: 'DevStack',
       description: 'A simple DevStack application to manage your development technologies.',
       techStack: ['React.js', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      imageSrc: '/projects/DevStack.png',
       liveLink: 'https://devstack-s-sarman-b14-a05.netlify.app/',
       githubLink: 'https://github.com/SajidSarman/B14-A05',
       challenges: '---',
@@ -52,7 +58,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-neutral-900 text-white border-t border-neutral-800">
       <div className="max-w-6xl mx-auto px-4">
-        
+
         <div className="mb-12 text-center md:text-left">
           <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
           <div className="h-1 w-12 bg-blue-600 mt-2 mx-auto md:mx-0 rounded"></div>
@@ -62,11 +68,22 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projectData.map((project) => (
             <div key={project.id} className="bg-neutral-800/50 rounded-xl border border-neutral-800 flex flex-col justify-between overflow-hidden shadow-lg">
-              {/* Fallback Image Block */}
-              <div className="h-48 bg-neutral-700/40 w-full flex items-center justify-center border-b border-neutral-800">
-                <span className="text-xs text-neutral-500 font-mono">[ {project.name} Thumbnail ]</span>
+
+              <div className="relative h-48 w-full bg-neutral-800 border-b border-neutral-800">
+                <Image
+                  src={project.imageSrc}
+                  alt={`${project.name} Screenshot`}
+                  width={400}
+                  height={250}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-              
+
+              {/* Fallback Image Block */}
+              {/* <div className="h-48 bg-neutral-700/40 w-full flex items-center justify-center border-b border-neutral-800">
+                <span className="text-xs text-neutral-500 font-mono">[ {project.name} Thumbnail ]</span>
+              </div> */}
+
               {/* Card Body */}
               <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
                 <div>
@@ -75,7 +92,7 @@ const Projects = () => {
                     {project.description}
                   </p>
                 </div>
-                
+
                 <button
                   onClick={() => setSelectedProject(project)}
                   className="w-full text-center py-2.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-medium rounded-lg text-sm border border-neutral-700 transition"
@@ -91,8 +108,8 @@ const Projects = () => {
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
             <div className="bg-neutral-900 border border-neutral-800 w-full max-w-2xl rounded-2xl p-6 md:p-8 max-h-[90vh] overflow-y-auto space-y-6 relative text-left">
-              
-              <button 
+
+              <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 text-neutral-400 hover:text-white p-2 rounded-lg bg-neutral-800/50 hover:bg-neutral-800"
               >
@@ -129,18 +146,18 @@ const Projects = () => {
 
               {/*links*/}
               <div className="pt-4 border-t border-neutral-800 grid grid-cols-2 gap-4">
-                <a 
-                  href={selectedProject.liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={selectedProject.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-center py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-sm transition"
                 >
                   Live Preview
                 </a>
-                <a 
-                  href={selectedProject.githubLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={selectedProject.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-center py-2.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-medium rounded-lg text-sm border border-neutral-700 transition"
                 >
                   GitHub Link

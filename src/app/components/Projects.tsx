@@ -59,10 +59,14 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-neutral-900 text-white border-t border-neutral-800">
       <div className="max-w-6xl mx-auto px-4">
 
-        <div className="mb-12 text-center md:text-left">
+        <div className="mb-8 text-center md:text-left">
           <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
           <div className="h-1 w-12 bg-blue-600 mt-2 mx-auto md:mx-0 rounded"></div>
         </div>
+        {/* <div className="mb-12 text-left">
+          <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
+          <div className="h-1 w-12 bg-blue-600 mt-2 rounded"></div>
+        </div> */}
 
         {/*cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

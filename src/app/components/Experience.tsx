@@ -47,10 +47,14 @@ const Experience = () => {
           
           {/* Education Block */}
           <div>
-            <div className="mb-8">
+            <div className="text-center md:text-left mb-8">
+              <h2 className="text-3xl font-bold tracking-tight">Education</h2>
+              <div className="h-1 w-12 bg-blue-600 mt-2 mx-auto md:mx-0 rounded"></div>
+            </div>
+            {/* <div className="mb-8">
               <h2 className="text-3xl font-bold tracking-tight">Education</h2>
               <div className="h-1 w-12 bg-blue-600 mt-2 rounded"></div>
-            </div>
+            </div> */}
             
             <div className="space-y-6 border-l-2 border-neutral-800 pl-6 ml-2">
               {educationData.map((item, idx) => (

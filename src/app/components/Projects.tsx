@@ -27,8 +27,8 @@ const Projects = () => {
       imageSrc: '/projects/Bazar_Dor.png',
       liveLink: 'https://bazar-dor-b14-a07-s-sarman.vercel.app/',
       githubLink: 'https://github.com/SajidSarman/b14-a07',
-      challenges: '---',
-      futureImprovements: '---'
+      challenges: 'Connecting to the database and configuring the middleware.',
+      futureImprovements: 'Polish the UI and add a dark theme.'
     },
     {
       id: 2,
@@ -39,8 +39,8 @@ const Projects = () => {
 
       liveLink: 'https://fitlog-b14-a06-s-sarman.vercel.app/',
       githubLink: 'https://github.com/SajidSarman/b14-a06',
-      challenges: '---',
-      futureImprovements: '---'
+      challenges: 'Adding workout cards to the My Plan page.',
+      futureImprovements: 'Add local storage to save workouts and a search bar to find exercises.'
     },
     {
       id: 3,
@@ -50,8 +50,8 @@ const Projects = () => {
       imageSrc: '/projects/DevStack.png',
       liveLink: 'https://devstack-s-sarman-b14-a05.netlify.app/',
       githubLink: 'https://github.com/SajidSarman/B14-A05',
-      challenges: '---',
-      futureImprovements: '---'
+      challenges: 'Managing state updates across the application.',
+      futureImprovements: 'Add a dark theme.'
     }
   ];
 

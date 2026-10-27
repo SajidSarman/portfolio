@@ -23,7 +23,7 @@ const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <nav className="fixed top-0 left-0 right-0 bg-neutral-900 border-b border-neutral-800 text-white z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold tracking-tight">PORTFOLIO</a>
+        <a href="#home" className="text-xl font-bold tracking-tight">SAJID SARMAN</a>
         
         {/*links*/}
         <div className="hidden md:flex space-x-6">

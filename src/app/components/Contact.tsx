@@ -77,8 +77,8 @@ const Contact = () => {
 
       {/*Footer Layout */}
       <div className="bg-neutral-950 border-t border-neutral-900 py-6 text-center text-xs text-neutral-600">
-        {/* <p>&copy; {new Date().getFullYear()} Sajid Sarman Portfolio. All Rights Reserved.</p> */}
-        <p>Sajid Sarman. All Rights Reserved.</p>
+        {/* <p>&copy; {new Date().getFullYear()} Sajid Sarman. All Rights Reserved.</p> */}
+        <p>&copy; 2026 Sajid Sarman. All Rights Reserved.</p>
       </div>
 
     </footer>
